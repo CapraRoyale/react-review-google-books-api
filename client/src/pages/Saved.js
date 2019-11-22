@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
-
+// This is our saved page, to render our saved bookes from our database
 class Saved extends Component {
   state = {
     books: []

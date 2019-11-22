@@ -1,3 +1,4 @@
+// IMPORT ALL THE THINGS
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
@@ -7,7 +8,8 @@ import Footer from "../components/Footer";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
-
+// Initialize component with an empty array to contain book results, an empty string for the query
+// and a welcome message
 class Home extends Component {
   state = {
     books: [],
@@ -21,7 +23,7 @@ class Home extends Component {
       [name]: value
     });
   };
-
+// Create function inside component to query API
   getBooks = () => {
     API.getBooks(this.state.q)
       .then(res =>
@@ -38,7 +40,9 @@ class Home extends Component {
   };
 
   handleFormSubmit = event => {
+    // Don't submit query like a REGULAR HTML form
     event.preventDefault();
+    // Submit query like a COOL HTML form
     this.getBooks();
   };
 
@@ -83,6 +87,7 @@ class Home extends Component {
             <Card title="Results">
               {this.state.books.length ? (
                 <List>
+                {/* Yo, there's a lot of key:value pairs here, we gotta map 'em */}
                   {this.state.books.map(book => (
                     <Book
                       key={book.id}

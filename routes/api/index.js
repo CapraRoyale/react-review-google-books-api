@@ -9,7 +9,7 @@ router.use("/books", bookRoutes);
 // Google Routes
 router.use("/google", googleRoutes);
 
-// For anything else, render the html page
+// For anything else, render the html page becasue static assets are at least GENERALLY reliable
 router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../../client/build/index.html"));
 });

@@ -1,8 +1,9 @@
+// Import various components for use in this component
 import React from "react";
 import { ListItem } from "../List";
 import { Row, Col } from "../Grid";
 import "./style.css";
-
+// Define component with various props for populating with data during use
 function Book({ title, subtitle, authors, link, description, image, Button }) {
   return (
     <ListItem>
@@ -36,5 +37,5 @@ function Book({ title, subtitle, authors, link, description, image, Button }) {
     </ListItem>
   );
 }
-
+// Alwasy be sure to export your component for use by your application
 export default Book;

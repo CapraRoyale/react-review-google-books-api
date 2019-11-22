@@ -1,5 +1,5 @@
 import React from "react";
-
+// This is our component for searching the Google Books API by passing the query as a prop
 function Form({ q, handleInputChange, handleFormSubmit }) {
   return (
     <form>

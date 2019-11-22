@@ -1,3 +1,4 @@
+// One Jumbotrom container, coming up!
 import React from "react";
 import "./style.css";
 

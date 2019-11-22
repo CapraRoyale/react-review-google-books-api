@@ -7,7 +7,7 @@ class Nav extends Component {
     open: false,
     width: window.innerWidth
   };
-
+// Create several state functions to ensure responsive web design
   updateWidth = () => {
     const newState = { width: window.innerWidth };
 
@@ -43,8 +43,7 @@ class Nav extends Component {
           data-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
         <div className={`${this.state.open ? "" : "collapse "}navbar-collapse`} id="navbarNav">
@@ -52,9 +51,9 @@ class Nav extends Component {
             <li className="nav-item">
               <Link
                 onClick={this.toggleNav}
+                // If the current browser window page is at our root directory, toggle the className to active
                 className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
-                to="/"
-              >
+                to="/">
                 Search
               </Link>
             </li>
@@ -62,8 +61,7 @@ class Nav extends Component {
               <Link
                 onClick={this.toggleNav}
                 className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                to="/saved"
-              >
+                to="/saved" >
                 Saved
               </Link>
             </li>

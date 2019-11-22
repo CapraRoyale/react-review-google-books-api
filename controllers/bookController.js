@@ -2,6 +2,8 @@ const db = require("../models");
 
 // Defining methods for the bookController
 module.exports = {
+ // Create four functions with promises to finda ll books, find a specific book,
+ // create a book entry in our saved db and update an entry in the saved db 
   findAll: function(req, res) {
     db.Book.find(req.query)
       .then(dbBook => res.json(dbBook))

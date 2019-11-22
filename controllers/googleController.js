@@ -1,7 +1,7 @@
 const axios = require("axios");
 const db = require("../models");
 
-// Defining methods for the googleController
+// Defining methods for the googleController which interfaces with the Google Books API
 
 // findAll searches the Google Books API and returns only the entries we haven't already saved
 

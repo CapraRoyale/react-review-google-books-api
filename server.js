@@ -1,3 +1,4 @@
+// Mostly boilerplate stuff
 const express = require("express");
 
 const mongoose = require("mongoose");

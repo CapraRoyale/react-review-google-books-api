@@ -5,7 +5,7 @@ export default {
   getBooks: function(q) {
     return axios.get("/api/google", { params: { q: "title:" + q } });
   },
-  // Gets all saved books
+  // Gets all saved books. So clean. So simple.
   getSavedBooks: function() {
     return axios.get("/api/books");
   },
